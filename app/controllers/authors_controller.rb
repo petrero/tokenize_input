@@ -1,6 +1,10 @@
 class AuthorsController < ApplicationController
   def index
     @authors = Author.order(:name)
+    respond_to do |format|
+      format.html
+      format.json { render json: @authors.where("name like ?", "%#{params[:q]}%") }
+    end
   end
 
   def show
