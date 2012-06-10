@@ -5,7 +5,7 @@ class Book < ActiveRecord::Base
   
   attr_reader :author_tokens
   
-  def author_tokens=(ids)
-    self.author_ids = ids.split(',')
+  def author_tokens=(tokens)
+    self.author_ids = Author.ids_from_tokens(tokens)
   end
 end
