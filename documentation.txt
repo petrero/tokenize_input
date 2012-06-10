@@ -1,0 +1,4 @@
+http://harvesthq.github.com/chosen/
+http://loopj.com/jquery-tokeninput
+http://ivaynberg.github.com/select2/
+
